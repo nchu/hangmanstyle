@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="words">
+        <item>dancing</item>
+        <item>shoe</item>
+        <item>sexy</item>
+        <item>lady</item>
+        <item>gangnam</item>
+        <item>style</item>
+        <item>sweater</item>
+        <item>hangman</item>
+        <item>hioa</item>
+        <item>lumia</item>
+        <item>cancer</item>
+        <item>dinosaurus</item>
+        <item>paleontologist</item>
+    </string-array>
+</resources>

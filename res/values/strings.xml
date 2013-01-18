@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hangman Style</string>
+    <string name="success">Oppan hangman style!</string>
+    <string name="failure">Try again!</string>
+    <string name="hangman_desc">Hangman!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="input_hint">Click here</string>
+
+</resources>
