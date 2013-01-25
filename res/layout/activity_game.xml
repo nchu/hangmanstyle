@@ -18,15 +18,135 @@
         android:textSize="20sp"
         android:id="@+id/word"
         />
+  <TableLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:id="@+id/tableLayout1"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    android:shrinkColumns="*"  
+    android:stretchColumns="*">
+       <TableRow  
+        android:id="@+id/tableRow1"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent">  
+        <Button  
+            android:id="@+id/a"  
+            android:text="@string/a"></Button>  
+        <Button  
+            android:id="@+id/b"  
+            android:text="@string/b"></Button>
+        <Button  
+            android:id="@+id/c"  
+            android:text="@string/c"></Button>
+        <Button  
+            android:id="@+id/d"  
+            android:text="@string/d"></Button>
+        <Button  
+            android:id="@+id/e"  
+            android:text="@string/e"></Button>
+         <Button  
+            android:id="@+id/f"  
+            android:text="@string/f"></Button>  
+  
+    </TableRow> 
+    
+    <TableRow  
+        android:id="@+id/tableRow2"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent">  
+        <Button  
+            android:id="@+id/g"  
+            android:text="@string/g"></Button>
+        <Button  
+            android:id="@+id/h"  
+            android:text="@string/h"></Button>
+        <Button  
+            android:id="@+id/i"  
+            android:text="@string/i"></Button>
+        <Button  
+            android:id="@+id/j"  
+            android:text="@string/j"></Button>
+        <Button  
+            android:id="@+id/k"  
+            android:text="@string/k"></Button>
+        <Button  
+            android:id="@+id/l"  
+            android:text="@string/l"></Button>
+        
+    </TableRow>  
+    
+    <TableRow  
+        android:id="@+id/tableRow3"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent">  
+
+        <Button  
+            android:id="@+id/m"  
+            android:text="@string/m"></Button>
+        <Button  
+            android:id="@+id/n"  
+            android:text="@string/n"></Button>
+        <Button  
+            android:id="@+id/o"  
+            android:text="@string/o"></Button>
+        <Button  
+            android:id="@+id/p"  
+            android:text="@string/p"></Button>
+        <Button  
+            android:id="@+id/q"  
+            android:text="@string/q"></Button>
+        <Button  
+            android:id="@+id/r"  
+            android:text="@string/r"></Button>
+    </TableRow> 
+    
+    <TableRow  
+        android:id="@+id/tableRow4"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent">  
+
+        <Button  
+            android:id="@+id/s"  
+            android:text="@string/s"></Button>
+        <Button  
+            android:id="@+id/t"  
+            android:text="@string/t"></Button>
+        <Button  
+            android:id="@+id/u"  
+            android:text="@string/u"></Button>
+        <Button  
+            android:id="@+id/v"  
+            android:text="@string/v"></Button>
+        <Button  
+            android:id="@+id/w"  
+            android:text="@string/w"></Button>
+        <Button  
+            android:id="@+id/x"  
+            android:text="@string/x"></Button>
+    </TableRow> 
+    
+   <TableRow  
+        android:id="@+id/tableRow5"  
+        android:layout_height="wrap_content"  
+        android:layout_width="match_parent">  
+
+        <Button  
+            android:id="@+id/y"  
+            android:text="@string/y"></Button>
+        <Button  
+            android:id="@+id/z"  
+            android:text="@string/z"></Button>
+
+    </TableRow> 
+
+      
+  </TableLayout>
     
     <EditText 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
     	android:visibility="gone"
-    	android:inputType="textCapCharacters"
-    	android:maxLength="1"
+    	android:layout_width="match_parent"> 
     	android:hint="@string/input_hint"
-    	android:id="@+id/input"
-    	/>
+    	android:id="@+id/input">
+    	</EditText>
     
 </LinearLayout>

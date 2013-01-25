@@ -28,7 +28,6 @@ public class Game extends Activity {
         
         words = getResources().getStringArray(R.array.words);
         wordsGuessed = new ArrayList<String>();
-        Log.d("testdebug", "Feil i onCreate");
     }
 
     @Override
