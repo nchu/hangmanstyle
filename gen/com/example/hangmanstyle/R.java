@@ -14,14 +14,14 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int 1=0x7f020000;
-        public static final int 2=0x7f020001;
-        public static final int 3=0x7f020002;
-        public static final int 4=0x7f020003;
-        public static final int 5=0x7f020004;
-        public static final int 6=0x7f020005;
-        public static final int 7=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
+        public static final int ic_launcher=0x7f020000;
+        public static final int p1=0x7f020001;
+        public static final int p2=0x7f020002;
+        public static final int p3=0x7f020003;
+        public static final int p4=0x7f020004;
+        public static final int p5=0x7f020005;
+        public static final int p6=0x7f020006;
+        public static final int p7=0x7f020007;
     }
     public static final class id {
         public static final int hangmanImage=0x7f080000;

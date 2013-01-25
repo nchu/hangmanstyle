@@ -1,19 +1,21 @@
 package com.example.hangmanstyle;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Game extends Activity {
 	
 	private String[] words;
+	private ArrayList<String> wordsGuessed;
 	private String currentWord;
 	private String currentGuess;
 	private String currentLetterGuessed;
@@ -24,7 +26,9 @@ public class Game extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         
-        
+        words = getResources().getStringArray(R.array.words);
+        wordsGuessed = new ArrayList<String>();
+        Log.d("testdebug", "Feil i onCreate");
     }
 
     @Override
@@ -77,6 +81,7 @@ public class Game extends Activity {
     
     public void onLetterFailure() {
     	// endre bilde
+    	
     	// endre count på forsøk
     	// sjekk om siste forsøk
     }
@@ -88,6 +93,8 @@ public class Game extends Activity {
     
     private void reset() {
     	currentWord = getRandomWord();
+    	wordsGuessed.add(currentWord);
+    	
     	triesLeft = 6;
     	StringBuilder builder = new StringBuilder();
     	
@@ -95,7 +102,7 @@ public class Game extends Activity {
     		builder.append('-');
     	}
     	currentGuess = builder.toString();
-
+    	
     	updateGuess(currentGuess);
     }
     
@@ -106,11 +113,16 @@ public class Game extends Activity {
     }
     
     private String getRandomWord() {
-    	words = getResources().getStringArray(R.array.words);
-    	
     	Random rand = new Random();
     	
-    	return words[rand.nextInt(words.length)];
+    	String word;
+    	
+    	do {
+    		word = words[rand.nextInt(words.length)];
+    	}
+    	while( !wordsGuessed.contains(word));
+    	
+    	return word;
     }
     
 }
