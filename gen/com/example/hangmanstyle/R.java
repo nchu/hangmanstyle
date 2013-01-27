@@ -27,11 +27,12 @@ public final class R {
         public static final int h=0x7f08000c;
         public static final int hangmanImage=0x7f080000;
         public static final int i=0x7f08000d;
+        public static final int input=0x7f080022;
         public static final int j=0x7f08000e;
         public static final int k=0x7f08000f;
         public static final int l=0x7f080010;
         public static final int m=0x7f080012;
-        public static final int menu_settings=0x7f080022;
+        public static final int menu_settings=0x7f080023;
         public static final int n=0x7f080013;
         public static final int o=0x7f080014;
         public static final int p=0x7f080015;

@@ -11,6 +11,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ImageView;
 
 public class Game extends Activity {
 	
@@ -20,6 +21,7 @@ public class Game extends Activity {
 	private String currentGuess;
 	private String currentLetterGuessed;
 	private int triesLeft;
+	private ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class Game extends Activity {
         
         words = getResources().getStringArray(R.array.words);
         wordsGuessed = new ArrayList<String>();
+        image = (ImageView) findViewById(R.id.hangmanImage);
+        //reset();
     }
 
     @Override
@@ -103,6 +107,9 @@ public class Game extends Activity {
     	currentGuess = builder.toString();
     	
     	updateGuess(currentGuess);
+    	
+    	//reset image
+    	//image.setImageResource(R.drawable.);
     }
     
     private void updateGuess(String newWord) {
