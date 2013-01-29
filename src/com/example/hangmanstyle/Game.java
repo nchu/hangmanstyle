@@ -6,11 +6,13 @@ import java.util.Random;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.res.Resources;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ImageView;
@@ -66,7 +68,7 @@ public class Game extends Activity {
     	triesLeft--;
     	Button button = (Button) view;
     	currentLetterGuessed = (String) button.getText();
-    	
+
     	if( triesLeft > 0) {
     		if (isLegalLetter(currentLetterGuessed))
     		{
@@ -117,18 +119,19 @@ public class Game extends Activity {
     }
     
     public void onLetterFailure(Button button) {
+    	
 		button.setVisibility(View.INVISIBLE);
 		button.setClickable(false);
 
 		int tries = 6 - triesLeft;
 		switch(tries)
 		{
-			case 1:  image.setImageResource(R.drawable.p2);
-			case 2:  image.setImageResource(R.drawable.p3);
-			case 3:  image.setImageResource(R.drawable.p4);
-			case 4:  image.setImageResource(R.drawable.p5);
-			case 5:	 image.setImageResource(R.drawable.p6);
-			case 6:  onWordFailure();
+			case 1:  image.setImageResource(R.drawable.p2); break;
+			case 2:  image.setImageResource(R.drawable.p3); break;
+			case 3:  image.setImageResource(R.drawable.p4); break;
+			case 4:  image.setImageResource(R.drawable.p5); break;
+			case 5:	 image.setImageResource(R.drawable.p6); break;
+			case 6:  onWordFailure(); break;
 			default:  image.setImageResource(R.drawable.p1);
 		}
     	
@@ -142,7 +145,23 @@ public class Game extends Activity {
     private void reset() {
     	init();
     	
-    	//TODO: resette knapper
+    	//String[] letters ={"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+    	int[] ids = new int[1];
+    	Resources res = getResources();
+    	int id = res.getIdentifier("titleText", "id", getBaseContext().getPackageName());
+    	
+    	TableLayout tl = (TableLayout)findViewById(R.id.tableLayout1);
+    	for(int i = 0; i < tl.getChildCount(); i++)
+    	{
+    		TableRow row = (TableRow)tl.getChildAt(i);
+    		for(int j = 0; j < row.getChildCount(); j++)
+    		{
+    			Button but = (Button) row.getChildAt(j);
+    			but.setVisibility(View.VISIBLE);
+    			but.setClickable(true);	
+    		}
+    	}
+
     }
     
     private void updateGuess(String newWord) {
