@@ -15,7 +15,7 @@ public class MainView extends Activity {
         setContentView(R.layout.main_page);
     }
     
-    protected void startGame(View view) {
+    public void startGame(View view) {
     	try {
     		Intent i = new Intent(this, Game.class);
     		startActivity(i);
@@ -25,7 +25,7 @@ public class MainView extends Activity {
     	}
     }
     
-    protected void showAbout(View view) {
+    public void showAbout(View view) {
     	try {
     		Intent i = new Intent(this, AboutView.class);
     		startActivity(i);
