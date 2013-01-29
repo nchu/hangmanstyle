@@ -33,7 +33,25 @@ public class Game extends Activity {
         words = getResources().getStringArray(R.array.words);
         wordsGuessed = new ArrayList<String>();
         image = (ImageView) findViewById(R.id.hangmanImage);
-        reset();
+        init();
+    }
+    
+    private void init()
+    {
+    	currentWord = getRandomWord();
+    	wordsGuessed.add(currentWord);
+    	
+    	triesLeft = 6;
+    	StringBuilder builder = new StringBuilder();
+    	
+    	for( int i = 0; i < currentWord.length(); i++ ) {
+    		builder.append('-');
+    	}
+    	currentGuess = builder.toString();
+    	
+    	updateGuess(currentGuess);
+    	
+    	image.setImageResource(R.drawable.p1);
     }
 
     @Override
@@ -45,6 +63,7 @@ public class Game extends Activity {
     
     @SuppressLint("NewApi") 
     public void onLetterClick(View view) {
+    	triesLeft--;
     	Button button = (Button) view;
     	currentLetterGuessed = (String) button.getText();
     	
@@ -92,20 +111,19 @@ public class Game extends Activity {
     }
     
     public void onLetterFailure(Button button) {
-    	triesLeft--;
 		button.setVisibility(View.INVISIBLE);
 		button.setClickable(false);
 
 		int tries = 6 - triesLeft;
 		switch(tries)
 		{
-			case 1:  image.setImageResource(R.drawable.p1);
-			case 2:  image.setImageResource(R.drawable.p2);
-			case 3:  image.setImageResource(R.drawable.p3);
-			case 4:  image.setImageResource(R.drawable.p4);
-			case 5:	 image.setImageResource(R.drawable.p5);
-			case 6:  image.setImageResource(R.drawable.p6);
-			default: onWordFailure();
+			case 1:  image.setImageResource(R.drawable.p2);
+			case 2:  image.setImageResource(R.drawable.p3);
+			case 3:  image.setImageResource(R.drawable.p4);
+			case 4:  image.setImageResource(R.drawable.p5);
+			case 5:	 image.setImageResource(R.drawable.p6);
+			case 6:  onWordFailure();
+			default:  image.setImageResource(R.drawable.p1);
 		}
     	
     }
@@ -116,20 +134,9 @@ public class Game extends Activity {
     }
     
     private void reset() {
-    	currentWord = getRandomWord();
-    	wordsGuessed.add(currentWord);
+    	init();
     	
-    	triesLeft = 6;
-    	StringBuilder builder = new StringBuilder();
-    	
-    	for( int i = 0; i < currentWord.length(); i++ ) {
-    		builder.append('-');
-    	}
-    	currentGuess = builder.toString();
-    	
-    	updateGuess(currentGuess);
-    	
-    	image.setImageResource(R.drawable.p1);
+    	//TODO: resette knapper
     }
     
     private void updateGuess(String newWord) {
