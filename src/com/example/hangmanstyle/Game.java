@@ -100,6 +100,9 @@ public class Game extends Activity {
     
     public void onLetterSuccess(Button button) {
     	
+    	image.setImageResource(R.drawable.p7);
+    	Toast toast = Toast.makeText(getApplicationContext(), R.string.success, Toast.LENGTH_SHORT);
+    	
 		StringBuilder builder = new StringBuilder();
 		builder.append(currentGuess);
 		
@@ -145,8 +148,6 @@ public class Game extends Activity {
     private void reset() {
     	init();
     	
-    	//String[] letters ={"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
-    	int[] ids = new int[1];
     	Resources res = getResources();
     	int id = res.getIdentifier("titleText", "id", getBaseContext().getPackageName());
     	
