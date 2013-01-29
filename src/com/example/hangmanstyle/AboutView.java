@@ -8,6 +8,7 @@ public class AboutView extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceBundle) {
 		super.onCreate(savedInstanceBundle);
+		setContentView(R.layout.about_view);
 	}
 	
 }
