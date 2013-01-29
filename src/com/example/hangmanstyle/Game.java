@@ -68,11 +68,17 @@ public class Game extends Activity {
     	currentLetterGuessed = (String) button.getText();
     	
     	if( triesLeft > 0) {
-    		if (isLegalLetter(currentLetterGuessed)) onLetterSuccess(button);
+    		if (isLegalLetter(currentLetterGuessed))
+    		{
+    			onLetterSuccess(button);
+    		}
     		else onLetterFailure(button);
     	}
     	else {
-    		if( currentGuess.equals(currentWord) ) onWordSuccess();
+    		if( currentGuess.equals(currentWord) )
+    		{
+    			onWordSuccess();
+    		}
     		else onWordFailure();
     	}
     }
