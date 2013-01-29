@@ -9,6 +9,8 @@ import android.app.Activity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ImageView;
@@ -31,7 +33,7 @@ public class Game extends Activity {
         words = getResources().getStringArray(R.array.words);
         wordsGuessed = new ArrayList<String>();
         image = (ImageView) findViewById(R.id.hangmanImage);
-        //reset();
+        reset();
     }
 
     @Override
@@ -42,13 +44,13 @@ public class Game extends Activity {
     }
     
     @SuppressLint("NewApi") 
-    public void onKeyUp(KeyEvent e) {
-    	int letterCode = e.getKeyCode();
-    	String letter = KeyEvent.keyCodeToString(letterCode);
+    public void onLetterClick(View view) {
+    	Button button = (Button) view;
+    	currentLetterGuessed = (String) button.getText();
     	
     	if( triesLeft > 0) {
-    		if (isLegalLetter(letter)) onLetterSuccess();
-    		else onLetterFailure();
+    		if (isLegalLetter(currentLetterGuessed)) onLetterSuccess(button);
+    		else onLetterFailure(button);
     	}
     	else {
     		if( currentGuess.equals(currentWord) ) onWordSuccess();
@@ -63,30 +65,49 @@ public class Game extends Activity {
     }
     
     public void onWordFailure() {
+    	image.setImageResource(R.drawable.p7);
     	Toast toast = Toast.makeText(getApplicationContext(), R.string.failure, Toast.LENGTH_SHORT);
     	toast.show();
     	reset();
     }
     
-    public void onLetterSuccess() {
+    public void onLetterSuccess(Button button) {
+    	
+		StringBuilder builder = new StringBuilder();
+		builder.append(currentGuess);
+		
     	for( int i = 0; i < currentWord.length(); i++) {
     		if( currentWord.charAt(i) == currentLetterGuessed.charAt(0) ) {
-    			StringBuilder builder = new StringBuilder();
-    			builder.append(currentGuess);
     			builder.setCharAt(i, currentLetterGuessed.charAt(0));
-    			
-    			currentGuess = builder.toString();
     		}
     	}
+		button.setVisibility(View.INVISIBLE);
+		button.setClickable(false);
+		
+		currentGuess = builder.toString();
+		updateGuess(currentGuess);
+		
     	
     	if( currentGuess.equals(currentWord) ) onWordSuccess();
     }
     
-    public void onLetterFailure() {
-    	// endre bilde
+    public void onLetterFailure(Button button) {
+    	triesLeft--;
+		button.setVisibility(View.INVISIBLE);
+		button.setClickable(false);
+
+		int tries = 6 - triesLeft;
+		switch(tries)
+		{
+			case 1:  image.setImageResource(R.drawable.p1);
+			case 2:  image.setImageResource(R.drawable.p2);
+			case 3:  image.setImageResource(R.drawable.p3);
+			case 4:  image.setImageResource(R.drawable.p4);
+			case 5:	 image.setImageResource(R.drawable.p5);
+			case 6:  image.setImageResource(R.drawable.p6);
+			default: onWordFailure();
+		}
     	
-    	// endre count pŒ fors¿k
-    	// sjekk om siste fors¿k
     }
     
     
@@ -108,8 +129,7 @@ public class Game extends Activity {
     	
     	updateGuess(currentGuess);
     	
-    	//reset image
-    	//image.setImageResource(R.drawable.);
+    	image.setImageResource(R.drawable.p1);
     }
     
     private void updateGuess(String newWord) {
@@ -126,7 +146,7 @@ public class Game extends Activity {
     	do {
     		word = words[rand.nextInt(words.length)];
     	}
-    	while( !wordsGuessed.contains(word));
+    	while(wordsGuessed.contains(word));
     	
     	return word;
     }

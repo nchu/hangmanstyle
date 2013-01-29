@@ -31,22 +31,28 @@
         android:layout_width="match_parent">  
         <Button  
             android:id="@+id/a"  
-            android:text="@string/a"></Button>  
+            android:text="@string/a"
+            android:onClick="onLetterClick"></Button>  
         <Button  
             android:id="@+id/b"  
-            android:text="@string/b"></Button>
+            android:text="@string/b"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/c"  
-            android:text="@string/c"></Button>
+            android:text="@string/c"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/d"  
-            android:text="@string/d"></Button>
+            android:text="@string/d"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/e"  
-            android:text="@string/e"></Button>
+            android:text="@string/e"
+            android:onClick="onLetterClick"></Button>
          <Button  
             android:id="@+id/f"  
-            android:text="@string/f"></Button>  
+            android:text="@string/f"
+            android:onClick="onLetterClick"></Button>  
   
     </TableRow> 
     
@@ -56,22 +62,28 @@
         android:layout_width="match_parent">  
         <Button  
             android:id="@+id/g"  
-            android:text="@string/g"></Button>
+            android:text="@string/g"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/h"  
-            android:text="@string/h"></Button>
+            android:text="@string/h"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/i"  
-            android:text="@string/i"></Button>
+            android:text="@string/i"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/j"  
-            android:text="@string/j"></Button>
+            android:text="@string/j"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/k"  
-            android:text="@string/k"></Button>
+            android:text="@string/k"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/l"  
-            android:text="@string/l"></Button>
+            android:text="@string/l"
+            android:onClick="onLetterClick"></Button>
         
     </TableRow>  
     
@@ -82,22 +94,28 @@
 
         <Button  
             android:id="@+id/m"  
-            android:text="@string/m"></Button>
+            android:text="@string/m"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/n"  
-            android:text="@string/n"></Button>
+            android:text="@string/n"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/o"  
-            android:text="@string/o"></Button>
+            android:text="@string/o"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/p"  
-            android:text="@string/p"></Button>
+            android:text="@string/p"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/q"  
-            android:text="@string/q"></Button>
+            android:text="@string/q"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/r"  
-            android:text="@string/r"></Button>
+            android:text="@string/r"
+            android:onClick="onLetterClick"></Button>
     </TableRow> 
     
     <TableRow  
@@ -107,22 +125,28 @@
 
         <Button  
             android:id="@+id/s"  
-            android:text="@string/s"></Button>
+            android:text="@string/s"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/t"  
-            android:text="@string/t"></Button>
+            android:text="@string/t"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/u"  
-            android:text="@string/u"></Button>
+            android:text="@string/u"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/v"  
-            android:text="@string/v"></Button>
+            android:text="@string/v"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/w"  
-            android:text="@string/w"></Button>
+            android:text="@string/w"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/x"  
-            android:text="@string/x"></Button>
+            android:text="@string/x"
+            android:onClick="onLetterClick"></Button>
     </TableRow> 
     
    <TableRow  
@@ -132,10 +156,12 @@
 
         <Button  
             android:id="@+id/y"  
-            android:text="@string/y"></Button>
+            android:text="@string/y"
+            android:onClick="onLetterClick"></Button>
         <Button  
             android:id="@+id/z"  
-            android:text="@string/z"></Button>
+            android:text="@string/z"
+            android:onClick="onLetterClick"></Button>
 
     </TableRow> 
 
