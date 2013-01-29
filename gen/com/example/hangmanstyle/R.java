@@ -14,17 +14,19 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int p1=0x7f020001;
-        public static final int p2=0x7f020002;
-        public static final int p3=0x7f020003;
-        public static final int p4=0x7f020004;
-        public static final int p5=0x7f020005;
-        public static final int p6=0x7f020006;
-        public static final int p7=0x7f020007;
+        public static final int hangman_style_bg=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int p1=0x7f020002;
+        public static final int p2=0x7f020003;
+        public static final int p3=0x7f020004;
+        public static final int p4=0x7f020005;
+        public static final int p5=0x7f020006;
+        public static final int p6=0x7f020007;
+        public static final int p7=0x7f020008;
     }
     public static final class id {
         public static final int a=0x7f080004;
+        public static final int aboutBtn=0x7f080024;
         public static final int b=0x7f080005;
         public static final int c=0x7f080006;
         public static final int d=0x7f080007;
@@ -39,13 +41,14 @@ public final class R {
         public static final int k=0x7f08000f;
         public static final int l=0x7f080010;
         public static final int m=0x7f080012;
-        public static final int menu_settings=0x7f080023;
+        public static final int menu_settings=0x7f080025;
         public static final int n=0x7f080013;
         public static final int o=0x7f080014;
         public static final int p=0x7f080015;
         public static final int q=0x7f080016;
         public static final int r=0x7f080017;
         public static final int s=0x7f080019;
+        public static final int startGameBtn=0x7f080023;
         public static final int t=0x7f08001a;
         public static final int tableLayout1=0x7f080002;
         public static final int tableRow1=0x7f080003;
