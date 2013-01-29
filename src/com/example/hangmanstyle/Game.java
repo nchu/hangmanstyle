@@ -6,6 +6,8 @@ import java.util.Random;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.util.Log;
 import android.view.Menu;
@@ -65,6 +67,8 @@ public class Game extends Activity {
     
     @SuppressLint("NewApi") 
     public void onLetterClick(View view) {
+    	Toast toast = Toast.makeText(getApplicationContext(), currentWord, Toast.LENGTH_SHORT);
+    	toast.show();
     	triesLeft--;
     	Button button = (Button) view;
     	currentLetterGuessed = (String) button.getText();
@@ -86,28 +90,43 @@ public class Game extends Activity {
     }
     
     public void onWordSuccess() {
-    	Toast toast = Toast.makeText(getApplicationContext(), R.string.success, Toast.LENGTH_SHORT);
-    	toast.show();
-    	reset();
+    	AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+
+    	dlgAlert.setTitle("WIN!");
+    	dlgAlert.setIcon(R.drawable.fuckyeah);
+    	dlgAlert.setCancelable(true);
+    	dlgAlert.setPositiveButton("Play again",
+    		    new DialogInterface.OnClickListener() {
+    		        public void onClick(DialogInterface dialog, int which) {
+    		        	reset(); 
+    		        }
+    		    });
+    	dlgAlert.create().show();
     }
     
     public void onWordFailure() {
     	image.setImageResource(R.drawable.p7);
-    	Toast toast = Toast.makeText(getApplicationContext(), R.string.failure, Toast.LENGTH_SHORT);
-    	toast.show();
-    	reset();
+    	
+    	AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+
+    	dlgAlert.setTitle("FAIL!");
+    	dlgAlert.setIcon(R.drawable.okay);
+    	dlgAlert.setCancelable(true);
+    	dlgAlert.setPositiveButton("Try again",
+    		    new DialogInterface.OnClickListener() {
+    		        public void onClick(DialogInterface dialog, int which) {
+    		        	reset(); 
+    		        }
+    		    });
+    	dlgAlert.create().show();
     }
     
     public void onLetterSuccess(Button button) {
-    	
-    	image.setImageResource(R.drawable.p7);
-    	Toast toast = Toast.makeText(getApplicationContext(), R.string.success, Toast.LENGTH_SHORT);
-    	
 		StringBuilder builder = new StringBuilder();
 		builder.append(currentGuess);
 		
     	for( int i = 0; i < currentWord.length(); i++) {
-    		if( currentWord.charAt(i) == currentLetterGuessed.charAt(0) ) {
+    		if( currentWord.toLowerCase().charAt(i) == currentLetterGuessed.toLowerCase().charAt(0) ) {
     			builder.setCharAt(i, currentLetterGuessed.charAt(0));
     		}
     	}
@@ -118,7 +137,7 @@ public class Game extends Activity {
 		updateGuess(currentGuess);
 		
     	
-    	if( currentGuess.equals(currentWord) ) onWordSuccess();
+    	if( currentGuess.toLowerCase().equals(currentWord.toLowerCase()) ) onWordSuccess();
     }
     
     public void onLetterFailure(Button button) {
@@ -142,7 +161,7 @@ public class Game extends Activity {
     
     
     private boolean isLegalLetter(String c) {
-    	return currentWord.contains(c);
+    	return currentWord.toLowerCase().contains(c.toLowerCase());
     }
     
     private void reset() {
