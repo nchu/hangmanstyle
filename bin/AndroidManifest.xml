@@ -13,8 +13,9 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.example.hangmanstyle.Game"
+        <activity android:name="com.example.hangmanstyle.Game" />
+        <activity android:name="com.example.hangmanstyle.AboutView" />
+        <activity android:name="com.example.hangmanstyle.MainView"
             android:label="@string/app_name"
             android:windowSoftInputMode="stateAlwaysVisible" >
             <intent-filter>
