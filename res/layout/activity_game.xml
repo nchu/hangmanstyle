@@ -3,21 +3,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Game" >
-
-    <ImageView
+    tools:context=".Game"
+    android:id="@+id/mainFrame" >
+          
+        <RelativeLayout 
+   		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wordAndCounterWrapper">
+       
+        <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/hangman_desc"
         android:id="@+id/hangmanImage"
         />
-    
-    <TextView 
+        
+        <TextView 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:id="@+id/word"
+        android:textSize="75sp"
+        android:id="@+id/counter"
+        android:layout_toRightOf="@+id/hangmanImage"
+        android:paddingTop="0sp"
+        android:layout_marginLeft="90sp"
+        
         />
+        </RelativeLayout>
+        
+        <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:id="@+id/word"
+        android:gravity="center_horizontal" 
+        />
+
   <TableLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"  
     android:id="@+id/tableLayout1"  
@@ -162,9 +182,7 @@
             android:id="@+id/z"  
             android:text="@string/z"
             android:onClick="onLetterClick"></Button>
-
     </TableRow> 
-
       
   </TableLayout>
     

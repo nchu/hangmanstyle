@@ -56,6 +56,7 @@ public class Game extends Activity {
     	updateGuess(currentGuess);
     	
     	image.setImageResource(R.drawable.p1);
+    	updateCounter(triesLeft);
     }
 
     @Override
@@ -67,9 +68,7 @@ public class Game extends Activity {
     
     @SuppressLint("NewApi") 
     public void onLetterClick(View view) {
-    	Toast toast = Toast.makeText(getApplicationContext(), currentWord, Toast.LENGTH_SHORT);
-    	toast.show();
-    	triesLeft--;
+
     	Button button = (Button) view;
     	currentLetterGuessed = (String) button.getText();
 
@@ -114,7 +113,8 @@ public class Game extends Activity {
     	dlgAlert.setCancelable(true);
     	dlgAlert.setPositiveButton("Try again",
     		    new DialogInterface.OnClickListener() {
-    		        public void onClick(DialogInterface dialog, int which) {
+    		        public void onClick(DialogInterface dialog, int which)
+    		        {
     		        	reset(); 
     		        }
     		    });
@@ -141,6 +141,9 @@ public class Game extends Activity {
     }
     
     public void onLetterFailure(Button button) {
+    	
+    	triesLeft--;
+    	updateCounter(triesLeft);
     	
 		button.setVisibility(View.INVISIBLE);
 		button.setClickable(false);
@@ -201,6 +204,17 @@ public class Game extends Activity {
     	while(wordsGuessed.contains(word));
     	
     	return word;
+    }
+    
+    private void updateCounter(int newCounter)
+    {
+    	TextView counter = (TextView) findViewById(R.id.counter);
+    	counter.setText(newCounter + "");
+    }
+    
+    private void onTryAgainClick()
+    {
+    	
     }
     
 }
