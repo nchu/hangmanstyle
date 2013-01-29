@@ -28,6 +28,8 @@ public class Game extends Activity {
 	private String currentLetterGuessed;
 	private int triesLeft;
 	private ImageView image;
+	private int gamesWon;
+	private int gamesLost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,9 @@ public class Game extends Activity {
         wordsGuessed = new ArrayList<String>();
         image = (ImageView) findViewById(R.id.hangmanImage);
         init();
+        
+        // Load gamesWon and gamesLost from preferences
+       // SharedPreferences 
     }
     
     private void init()
@@ -212,7 +217,8 @@ public class Game extends Activity {
     	counter.setText(newCounter + "");
     }
     
-    private void onTryAgainClick()
+    @Override 
+    protected void onStop()
     {
     	
     }
