@@ -8,6 +8,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.util.Log;
 import android.view.Menu;
@@ -30,6 +31,7 @@ public class Game extends Activity {
 	private ImageView image;
 	private int gamesWon;
 	private int gamesLost;
+	private static final String HANGMAN_STATS = "HANGMAN_STATS";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +96,7 @@ public class Game extends Activity {
     }
     
     public void onWordSuccess() {
+    	gamesWon++;
     	AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
 
     	dlgAlert.setTitle("WIN!");
@@ -109,6 +112,7 @@ public class Game extends Activity {
     }
     
     public void onWordFailure() {
+    	gamesLost++;
     	image.setImageResource(R.drawable.p7);
     	
     	AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
@@ -220,7 +224,13 @@ public class Game extends Activity {
     @Override 
     protected void onStop()
     {
-    	
+    	  SharedPreferences settings = getSharedPreferences(HANGMAN_STATS, gamesWon);
+    	  SharedPreferences.Editor editor = settings.edit();
+    	  editor.putInt("gamesWon", gamesWon);
+    	  editor.putInt("gamesLost", gamesLost);
+    	  editor.commit();
+    	  
+
     }
     
 }
