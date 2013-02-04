@@ -10,14 +10,12 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ImageView;
 
 public class Game extends Activity {
@@ -29,9 +27,16 @@ public class Game extends Activity {
 	private String currentLetterGuessed;
 	private int triesLeft;
 	private ImageView image;
+	
+	//Sharedpreferences stuff
+	private static final String HANGMAN_STATS = "HANGMAN_STATS";
+	private String user_wins = "user_wins_prefs";
+	private String user_losses = "user_losses_prefs";
+	private SharedPreferences appSharedPrefs;
+	private SharedPreferences.Editor prefsEditor;
 	private int gamesWon;
 	private int gamesLost;
-	private static final String HANGMAN_STATS = "HANGMAN_STATS";
+	
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +48,21 @@ public class Game extends Activity {
         image = (ImageView) findViewById(R.id.hangmanImage);
         init();
         
-        // Load gamesWon and gamesLost from preferences
-       // SharedPreferences 
+       this.appSharedPrefs = this.getSharedPreferences(HANGMAN_STATS, Activity.MODE_PRIVATE);
+       this.prefsEditor = appSharedPrefs.edit();
+        
+    }
+    
+    private void loadWinsAndLosses()
+    {
+    	gamesWon = appSharedPrefs.getInt(user_wins, 0);
+    	gamesLost = appSharedPrefs.getInt(user_losses, 0);
+    }
+    
+    private void saveWindAndLosses()
+    {
+    	prefsEditor.putInt(user_wins, gamesWon).commit();
+    	prefsEditor.putInt(user_losses, gamesLost).commit();
     }
     
     private void init()
@@ -102,7 +120,7 @@ public class Game extends Activity {
     	dlgAlert.setTitle("WIN!");
     	dlgAlert.setIcon(R.drawable.fuckyeah);
     	dlgAlert.setCancelable(true);
-    	dlgAlert.setPositiveButton("Play again",
+    	dlgAlert.setPositiveButton("@string/success",
     		    new DialogInterface.OnClickListener() {
     		        public void onClick(DialogInterface dialog, int which) {
     		        	reset(); 
@@ -120,7 +138,7 @@ public class Game extends Activity {
     	dlgAlert.setTitle("FAIL!");
     	dlgAlert.setIcon(R.drawable.okay);
     	dlgAlert.setCancelable(true);
-    	dlgAlert.setPositiveButton("Try again",
+    	dlgAlert.setPositiveButton("@string/failure",
     		    new DialogInterface.OnClickListener() {
     		        public void onClick(DialogInterface dialog, int which)
     		        {
@@ -224,13 +242,7 @@ public class Game extends Activity {
     @Override 
     protected void onStop()
     {
-    	  SharedPreferences settings = getSharedPreferences(HANGMAN_STATS, gamesWon);
-    	  SharedPreferences.Editor editor = settings.edit();
-    	  editor.putInt("gamesWon", gamesWon);
-    	  editor.putInt("gamesLost", gamesLost);
-    	  editor.commit();
-    	  
-
+    	saveWindAndLosses();
     }
     
 }
