@@ -3,12 +3,10 @@ package com.example.hangmanstyle;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 
 public class MainView extends Activity {
 	
@@ -22,12 +20,15 @@ public class MainView extends Activity {
         setWinsAndLossesText();
     }
     
+    
+    
     @Override
-    protected void onRestart()
+    protected void onResume()
     {
-    	super.onRestart();
+    	super.onResume();
     	setWinsAndLossesText();
     }
+    
     
     private void setWinsAndLossesText()
     {
@@ -42,7 +43,7 @@ public class MainView extends Activity {
         	losses = appPrefs.getGamesLost();
         }
         catch(Exception e){}
-       
+     	
     	 TextView textView = (TextView) findViewById(R.id.winsAndLossesCount);
     	 textView.setText(getResources().getString(R.string.wins) + " " + wins + " " + getResources().getString(R.string.and) + " " + losses + " " + getResources().getString(R.string.losses));
     }

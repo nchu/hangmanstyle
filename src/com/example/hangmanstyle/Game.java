@@ -9,7 +9,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.view.Menu;
 import android.view.View;
@@ -53,7 +52,7 @@ public class Game extends Activity {
     	gamesLost = appPrefs.getGamesLost();
     }
     
-    private void saveWindAndLosses()
+    private void saveWinsAndLosses()
     {
     	appPrefs.setGamesWon(gamesWon);
     	appPrefs.setGamesLost(gamesLost);
@@ -128,7 +127,7 @@ public class Game extends Activity {
     	image.setImageResource(R.drawable.p7);
     	
     	AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
-
+    	dlgAlert.setMessage(currentWord);
     	dlgAlert.setTitle("FAIL!");
     	dlgAlert.setIcon(R.drawable.okay);
     	dlgAlert.setCancelable(true);
@@ -237,7 +236,14 @@ public class Game extends Activity {
     protected void onStop()
     {
     	super.onStop();
-    	saveWindAndLosses();
+    	saveWinsAndLosses();
+    }
+    
+    @Override
+    public void onBackPressed()
+    {
+    	super.onBackPressed();
+    	saveWinsAndLosses();
     }
     
 }
