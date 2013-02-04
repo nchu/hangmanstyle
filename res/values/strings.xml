@@ -47,10 +47,11 @@
 
     <string name="aboutViewHeader">About hangman style</string>
     <string name="aboutText">
-        Oppan hangman style! This is a variation on the classical hangman game that has been
-        played in classrooms, slumber parties and other social events since beginning of chalk. 
-        Since you now have an Android phone, you can play it here! This game was created by Kris Selbekk
-        and Hans Petter Naumann as a school project, so it\'s all free for you to play and continue creating.
+       Hangman Style is an incredible brain-twister of a game \- based on a mix of the ingenious K\-pop hit from Psy, and the classic game of hangman. Together the two ingredients make a very tasty salsa of awesome.
+       You probably know the rules of the game, but if you don\'t, here are the big idea
+       You are trying to guess a word. You guess one letter at a time. You miss seven letters \- you will KILL Psy. I know, I know \- you\'re probably thinking this is the point of the game. You\'d be right, but no, you\'re actually trying to keep him alive, so he can keep doing that horse dance and get plays on Youtube.
+       So these are the rules. Ready to play? Let\'s go!
+       This app is made by Kristofer Selbekk &amp; Hans Petter Naumann.
     </string>
     
 
