@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -27,16 +28,9 @@ public class Game extends Activity {
 	private String currentLetterGuessed;
 	private int triesLeft;
 	private ImageView image;
-	
-	//Sharedpreferences stuff
-	private static final String HANGMAN_STATS = "HANGMAN_STATS";
-	private String user_wins = "user_wins_prefs";
-	private String user_losses = "user_losses_prefs";
-	private SharedPreferences appSharedPrefs;
-	private SharedPreferences.Editor prefsEditor;
 	private int gamesWon;
 	private int gamesLost;
-	
+	private AppPrefs appPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,23 +40,23 @@ public class Game extends Activity {
         words = getResources().getStringArray(R.array.words);
         wordsGuessed = new ArrayList<String>();
         image = (ImageView) findViewById(R.id.hangmanImage);
+    	Context context = getApplicationContext();
+        appPrefs = new AppPrefs(context);
+        loadWinsAndLosses();
         init();
-        
-       this.appSharedPrefs = this.getSharedPreferences(HANGMAN_STATS, Activity.MODE_PRIVATE);
-       this.prefsEditor = appSharedPrefs.edit();
         
     }
     
     private void loadWinsAndLosses()
     {
-    	gamesWon = appSharedPrefs.getInt(user_wins, 0);
-    	gamesLost = appSharedPrefs.getInt(user_losses, 0);
+    	gamesWon = appPrefs.getGamesWon();
+    	gamesLost = appPrefs.getGamesLost();
     }
     
     private void saveWindAndLosses()
     {
-    	prefsEditor.putInt(user_wins, gamesWon).commit();
-    	prefsEditor.putInt(user_losses, gamesLost).commit();
+    	appPrefs.setGamesWon(gamesWon);
+    	appPrefs.setGamesLost(gamesLost);
     }
     
     private void init()
@@ -242,6 +236,7 @@ public class Game extends Activity {
     @Override 
     protected void onStop()
     {
+    	super.onStop();
     	saveWindAndLosses();
     }
     

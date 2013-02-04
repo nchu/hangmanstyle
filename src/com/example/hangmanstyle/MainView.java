@@ -6,16 +6,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
 public class MainView extends Activity {
 	
-	//Sharedpreferences stuff
-	private static final String HANGMAN_STATS = "HANGMAN_STATS";
-	private String user_wins = "user_wins_prefs";
-	private String user_losses = "user_losses_prefs";
-	private SharedPreferences appSharedPrefs;
+	private AppPrefs appPrefs;
 	
 
     @Override
@@ -23,14 +20,15 @@ public class MainView extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_page);
         
-        this.appSharedPrefs = this.getSharedPreferences(HANGMAN_STATS, Activity.MODE_PRIVATE);
-         
+        Context context = getApplicationContext();
+        appPrefs = new AppPrefs(context);
+          
         int gamesWon = 0;
         int gamesLost = 0;
         try
         {
-        	gamesWon = appSharedPrefs.getInt(user_wins, 0);
-            gamesLost = appSharedPrefs.getInt(user_losses, 0);
+         	gamesWon = appPrefs.getGamesWon();
+        	gamesLost = appPrefs.getGamesLost();
         }
         catch(Exception e){}
         
@@ -41,7 +39,7 @@ public class MainView extends Activity {
     private void setWinsAndLossesText(int wins, int losses)
     {
     	 TextView textView = (TextView) findViewById(R.id.winsAndLossesCount);
-    	 textView.setText("@string/wins" + wins + "@string/and" + losses + "@string/losses");
+    	 textView.setText(getResources().getString(R.string.wins) + " " + wins + " " + getResources().getString(R.string.and) + " " + losses +getResources().getString(R.string.losses));
     }
     
     public void startGame(View view) {
