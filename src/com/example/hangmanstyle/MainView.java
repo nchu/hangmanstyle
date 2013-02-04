@@ -19,27 +19,32 @@ public class MainView extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_page);
-        
+        setWinsAndLossesText();
+    }
+    
+    @Override
+    protected void onRestart()
+    {
+    	super.onRestart();
+    	setWinsAndLossesText();
+    }
+    
+    private void setWinsAndLossesText()
+    {
         Context context = getApplicationContext();
         appPrefs = new AppPrefs(context);
           
-        int gamesWon = 0;
-        int gamesLost = 0;
+        int wins = 0;
+        int losses = 0;
         try
         {
-         	gamesWon = appPrefs.getGamesWon();
-        	gamesLost = appPrefs.getGamesLost();
+         	wins = appPrefs.getGamesWon();
+        	losses = appPrefs.getGamesLost();
         }
         catch(Exception e){}
-        
-     	setWinsAndLossesText(gamesWon, gamesLost);
-
-    }
-    
-    private void setWinsAndLossesText(int wins, int losses)
-    {
+       
     	 TextView textView = (TextView) findViewById(R.id.winsAndLossesCount);
-    	 textView.setText(getResources().getString(R.string.wins) + " " + wins + " " + getResources().getString(R.string.and) + " " + losses +getResources().getString(R.string.losses));
+    	 textView.setText(getResources().getString(R.string.wins) + " " + wins + " " + getResources().getString(R.string.and) + " " + losses + " " + getResources().getString(R.string.losses));
     }
     
     public void startGame(View view) {

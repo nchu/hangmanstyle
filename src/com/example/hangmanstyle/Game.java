@@ -114,7 +114,7 @@ public class Game extends Activity {
     	dlgAlert.setTitle("WIN!");
     	dlgAlert.setIcon(R.drawable.fuckyeah);
     	dlgAlert.setCancelable(true);
-    	dlgAlert.setPositiveButton("@string/success",
+    	dlgAlert.setPositiveButton(getResources().getString(R.string.success),
     		    new DialogInterface.OnClickListener() {
     		        public void onClick(DialogInterface dialog, int which) {
     		        	reset(); 
@@ -132,7 +132,7 @@ public class Game extends Activity {
     	dlgAlert.setTitle("FAIL!");
     	dlgAlert.setIcon(R.drawable.okay);
     	dlgAlert.setCancelable(true);
-    	dlgAlert.setPositiveButton("@string/failure",
+    	dlgAlert.setPositiveButton(getResources().getString(R.string.failure),
     		    new DialogInterface.OnClickListener() {
     		        public void onClick(DialogInterface dialog, int which)
     		        {
