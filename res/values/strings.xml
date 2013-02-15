@@ -16,7 +16,7 @@
     
     <string name="wins">You have won</string>
     <string name="and">time(s) and hung </string>
-    <string name="losses"> psy(\s)</string>
+    <string name="losses"> psy(s)</string>
     
     <string name="wordWas">The correct word was </string>
     
