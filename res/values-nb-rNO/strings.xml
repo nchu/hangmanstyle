@@ -47,7 +47,7 @@
     <string name="y">Y</string>
     <string name="z">Z</string>
 
-    <string name="aboutViewHeader">About hangman style</string>
+    <string name="aboutViewHeader">Om hangman style</string>
     <string name="aboutText">
        Hangman er et lett spill. Prøv å ikke få Psy hengt ved å gjette riktig ord, bokstav for bokstav. Klarer du det ikke dør Psy. Din morder. Appen er laget av Kristofer Selbekk &amp; Hans Petter Naumann.
     </string>
