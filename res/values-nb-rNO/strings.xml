@@ -15,7 +15,7 @@
     <string name="aboutBtnHint">Lær mer om Hangman Style</string>
     
     <string name="wins">Du har vunnet</string>
-    <string name="and">ganger og hengt</string>
+    <string name="and">gang(er) og hengt</string>
     <string name="losses"> Psy(er)</string>
     
     <string name="wordWas">Ordet var:</string>
