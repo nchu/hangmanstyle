@@ -235,6 +235,28 @@
             android:onClick="onLetterClick"
             style="@style/blue_button"
             android:layout_margin="2dp"></Button>
+        
+        <Button  
+            android:id="@+id/ae"  
+            android:text="@string/ae"
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"
+            android:visibility="gone"></Button>
+        <Button  
+            android:id="@+id/oe"  
+            android:text="@string/oe"
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"
+            android:visibility="gone"></Button>
+        <Button  
+            android:id="@+id/aa"  
+            android:text="@string/aa"
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"
+            android:visibility="gone"></Button>
     </TableRow> 
       
   </TableLayout>

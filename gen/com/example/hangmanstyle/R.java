@@ -31,7 +31,9 @@ public final class R {
     }
     public static final class id {
         public static final int a=0x7f080007;
-        public static final int aboutBtn=0x7f080028;
+        public static final int aa=0x7f080027;
+        public static final int aboutBtn=0x7f08002b;
+        public static final int ae=0x7f080025;
         public static final int b=0x7f080008;
         public static final int c=0x7f080009;
         public static final int counter=0x7f080003;
@@ -42,20 +44,21 @@ public final class R {
         public static final int h=0x7f08000f;
         public static final int hangmanImage=0x7f080002;
         public static final int i=0x7f080010;
-        public static final int input=0x7f080025;
+        public static final int input=0x7f080028;
         public static final int j=0x7f080011;
         public static final int k=0x7f080012;
         public static final int l=0x7f080013;
         public static final int m=0x7f080015;
         public static final int mainFrame=0x7f080000;
-        public static final int menu_settings=0x7f080029;
+        public static final int menu_settings=0x7f08002c;
         public static final int n=0x7f080016;
         public static final int o=0x7f080017;
+        public static final int oe=0x7f080026;
         public static final int p=0x7f080018;
         public static final int q=0x7f080019;
         public static final int r=0x7f08001a;
         public static final int s=0x7f08001c;
-        public static final int startGameBtn=0x7f080027;
+        public static final int startGameBtn=0x7f08002a;
         public static final int t=0x7f08001d;
         public static final int tableLayout1=0x7f080005;
         public static final int tableRow1=0x7f080006;
@@ -66,7 +69,7 @@ public final class R {
         public static final int u=0x7f08001e;
         public static final int v=0x7f08001f;
         public static final int w=0x7f080020;
-        public static final int winsAndLossesCount=0x7f080026;
+        public static final int winsAndLossesCount=0x7f080029;
         public static final int word=0x7f080004;
         public static final int wordAndCounterWrapper=0x7f080001;
         public static final int x=0x7f080021;
@@ -83,10 +86,12 @@ public final class R {
     }
     public static final class string {
         public static final int a=0x7f05000e;
+        public static final int aa=0x7f05002a;
         public static final int aboutBtn=0x7f050007;
         public static final int aboutBtnHint=0x7f050009;
-        public static final int aboutText=0x7f050029;
-        public static final int aboutViewHeader=0x7f050028;
+        public static final int aboutText=0x7f05002c;
+        public static final int aboutViewHeader=0x7f05002b;
+        public static final int ae=0x7f050028;
         public static final int and=0x7f05000b;
         public static final int app_name=0x7f050000;
         public static final int b=0x7f05000f;
@@ -110,6 +115,7 @@ public final class R {
         public static final int newGameBtn=0x7f050006;
         public static final int newGameBtnHint=0x7f050008;
         public static final int o=0x7f05001c;
+        public static final int oe=0x7f050029;
         public static final int p=0x7f05001d;
         public static final int q=0x7f05001e;
         public static final int r=0x7f05001f;

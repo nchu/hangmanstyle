@@ -1,12 +1,14 @@
 package com.example.hangmanstyle;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Random;
 
 import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Application;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
@@ -37,6 +39,18 @@ public class Game extends Activity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_game);
+        
+        if(Locale.getDefault().getISO3Language().toLowerCase().contains("no"))
+        {
+        	Button Button1 = (Button)findViewById(R.id.ae);
+        	Button1.setVisibility(View.VISIBLE);
+        	
+        	Button Button2 = (Button)findViewById(R.id.oe);
+        	Button2.setVisibility(View.VISIBLE);
+        	
+        	Button Button3 = (Button)findViewById(R.id.aa);
+        	Button3.setVisibility(View.VISIBLE);
+        }
         
         words = getResources().getStringArray(R.array.words);
         wordsGuessed = new ArrayList<String>();

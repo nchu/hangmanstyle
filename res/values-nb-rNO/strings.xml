@@ -46,6 +46,9 @@
     <string name="x">X</string>
     <string name="y">Y</string>
     <string name="z">Z</string>
+    <string name="ae">Æ</string>
+    <string name="oe">Ø</string>
+    <string name="aa">Å</string>
 
     <string name="aboutViewHeader">Om hangman style</string>
     <string name="aboutText">
