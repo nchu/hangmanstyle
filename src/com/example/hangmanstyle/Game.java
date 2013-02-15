@@ -131,6 +131,7 @@ public class Game extends Activity {
     	dlgAlert.setTitle("FAIL!");
     	dlgAlert.setIcon(R.drawable.okay);
     	dlgAlert.setCancelable(true);
+    	dlgAlert.setMessage(getResources().getString(R.string.wordWas) + " " + currentWord);
     	dlgAlert.setPositiveButton(getResources().getString(R.string.failure),
     		    new DialogInterface.OnClickListener() {
     		        public void onClick(DialogInterface dialog, int which)

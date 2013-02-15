@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="words">
-        <item>dancing</item>
-        <item>shoe</item>
+        <item>dansing</item>
+        <item>sko</item>
         <item>sexy</item>
-        <item>lady</item>
+        <item>dame</item>
         <item>gangnam</item>
-        <item>style</item>
-        <item>sweater</item>
+        <item>stil</item>
+        <item>genser</item>
         <item>hangman</item>
         <item>hioa</item>
         <item>lumia</item>
-        <item>cancer</item>
-        <item>dinosaur</item>
+        <item>fyllesyke</item>
+        <item>dinosaurus</item>
         <item>paleontologist</item>
         <item>salmon</item>
-        <item>sticky</item>
-        <item>water</item>
-        <item>mountains</item>
-        <item>trouble</item>
+        <item>krutt</item>
+        <item>vann</item>
+        <item>fjell</item>
+        <item>problem</item>
     </string-array>
 </resources>

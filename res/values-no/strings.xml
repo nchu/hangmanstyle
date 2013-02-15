@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hangman Style</string>
+    <string name="success">Oppan hangman style!</string>
+    <string name="failure">Prøv igjen!</string>
+    <string name="hangman_desc">Hangman!</string>
+    <string name="menu_settings">Innstillinger</string>
+    <string name="input_hint">Klikk her</string>
+    
+    <string name="newGameBtn">Oppan Nytt spill</string>
+    <string name="aboutBtn">Om Hangman Style</string>
+    
+    <string name="newGameBtnHint">Start et nytt spill</string>
+    <string name="aboutBtnHint">Lær mer om Hangman Style</string>
+    
+    <string name="wins">Du har</string>
+    <string name="and">vunnet og</string>
+    <string name="losses">hengte psy\'er</string>
+    
+    <string name="wordWas">The word was:</string>
+    
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="e">E</string>
+    <string name="f">F</string>
+    <string name="g">G</string>
+    <string name="h">H</string>
+    <string name="i">I</string>
+    <string name="j">J</string>
+    <string name="k">K</string>
+    <string name="l">L</string>
+    <string name="m">M</string>
+    <string name="n">N</string>
+    <string name="o">O</string>
+    <string name="p">P</string>
+    <string name="q">Q</string>
+    <string name="r">R</string>
+    <string name="s">S</string>
+    <string name="t">T</string>
+    <string name="u">U</string>
+    <string name="v">V</string>
+    <string name="w">W</string>
+    <string name="x">X</string>
+    <string name="y">Y</string>
+    <string name="z">Z</string>
+
+    <string name="aboutViewHeader">About hangman style</string>
+    <string name="aboutText">
+       Hangman er et lett spill. Prøv å ikke få Psy hengt ved å gjette riktig ord, bokstav for bokstav. Klarer du det ikke dør Psy. Din morder. Appen er laget av Kristofer Selbekk &amp; Hans Petter Naumann.
+    </string>
+    
+
+</resources>
