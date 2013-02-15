@@ -52,27 +52,39 @@
         <Button  
             android:id="@+id/a"  
             android:text="@string/a"
-            android:onClick="onLetterClick"></Button>  
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>  
         <Button  
             android:id="@+id/b"  
             android:text="@string/b"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/c"  
             android:text="@string/c"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/d"  
             android:text="@string/d"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/e"  
             android:text="@string/e"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
          <Button  
             android:id="@+id/f"  
             android:text="@string/f"
-            android:onClick="onLetterClick"></Button>  
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>  
   
     </TableRow> 
     
@@ -83,27 +95,39 @@
         <Button  
             android:id="@+id/g"  
             android:text="@string/g"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/h"  
             android:text="@string/h"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/i"  
             android:text="@string/i"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/j"  
             android:text="@string/j"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/k"  
             android:text="@string/k"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/l"  
             android:text="@string/l"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         
     </TableRow>  
     
@@ -115,27 +139,39 @@
         <Button  
             android:id="@+id/m"  
             android:text="@string/m"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/n"  
             android:text="@string/n"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/o"  
             android:text="@string/o"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/p"  
             android:text="@string/p"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/q"  
             android:text="@string/q"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/r"  
             android:text="@string/r"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
     </TableRow> 
     
     <TableRow  
@@ -146,27 +182,39 @@
         <Button  
             android:id="@+id/s"  
             android:text="@string/s"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/t"  
             android:text="@string/t"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/u"  
             android:text="@string/u"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/v"  
             android:text="@string/v"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/w"  
             android:text="@string/w"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/x"  
             android:text="@string/x"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
     </TableRow> 
     
    <TableRow  
@@ -177,11 +225,15 @@
         <Button  
             android:id="@+id/y"  
             android:text="@string/y"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
         <Button  
             android:id="@+id/z"  
             android:text="@string/z"
-            android:onClick="onLetterClick"></Button>
+            android:onClick="onLetterClick"
+            style="@style/blue_button"
+            android:layout_margin="2dp"></Button>
     </TableRow> 
       
   </TableLayout>

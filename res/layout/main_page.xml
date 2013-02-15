@@ -22,7 +22,9 @@
 	        android:layout_height="wrap_content"
 	        android:text="@string/newGameBtn"
 	        android:hint="@string/newGameBtnHint"
-	        android:onClick="startGame" />
+	        android:onClick="startGame"
+	        style="@style/blue_button"
+	        android:layout_marginBottom="5dp"/> />
 	    
 	    <Button
 	        android:id="@+id/aboutBtn"
@@ -30,7 +32,9 @@
 	        android:layout_height="wrap_content"
 	        android:text="@string/aboutBtn"
 	        android:hint="@string/aboutBtnHint" 
-	        android:onClick="showAbout" />
+	        android:onClick="showAbout"
+	        style="@style/blue_button"
+	        android:layout_marginBottom="5dp"/> />
     </LinearLayout>
 
 </RelativeLayout>
