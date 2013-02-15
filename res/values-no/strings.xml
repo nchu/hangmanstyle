@@ -14,11 +14,11 @@
     <string name="newGameBtnHint">Start et nytt spill</string>
     <string name="aboutBtnHint">Lær mer om Hangman Style</string>
     
-    <string name="wins">Du har</string>
-    <string name="and">vunnet og</string>
-    <string name="losses">hengte psy\'er</string>
+    <string name="wins">Du har vunnet</string>
+    <string name="and">ganger og hengt</string>
+    <string name="losses"> Psy(er)</string>
     
-    <string name="wordWas">The word was:</string>
+    <string name="wordWas">Ordet var:</string>
     
     <string name="a">A</string>
     <string name="b">B</string>

@@ -14,11 +14,11 @@
     <string name="newGameBtnHint">Start a new game</string>
     <string name="aboutBtnHint">Learn more about Hangman Style</string>
     
-    <string name="wins">You have</string>
-    <string name="and">wins and</string>
-    <string name="losses">hanged psy\'s</string>
+    <string name="wins">You have won</string>
+    <string name="and">time(s) and hung </string>
+    <string name="losses"> psy(\s)</string>
     
-    <string name="wordWas">Ordet var:</string>
+    <string name="wordWas">The correct word was </string>
     
     <string name="a">A</string>
     <string name="b">B</string>
